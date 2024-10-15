@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px;
+}
+
+img {
+  border-radius: 122px;
+  width: 900px; /* 3 times the original width */
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background-image: linear-gradient(to bottom, maroon, black);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  cursor: url('cursor-image.png'), auto; /* Replace 'cursor-image.png' with your image path */
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url('cursor-trail-image.png'); /* Replace 'cursor-trail-image.png' with your image path */
+  background-size: contain;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+  transition: transform 0.2s ease-in-out;
+}
+
+body:hover:after {
+  opacity: 1;
+}
+
+body:active:after {
+  transform: scale(1.5);
+}
